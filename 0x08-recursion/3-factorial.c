@@ -1,17 +1,16 @@
-#include <stdio.h>
-
-int _strlen_recursion(char *);
+#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+ * factorial - returns the factorial of a number
+ * @n: number to return the factorial from
+ *
+ * Return: factorial of n
+ */
+int factorial(int n)
 {
-	int n;
-
-	n = _strlen_recursion("You mustn't be afraid to dream a little bigger, darling.");
-	printf("%d\n", n);
-	return (0);
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (1);
+	return (n * factorial(n - 1));
 }
